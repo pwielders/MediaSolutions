@@ -1,0 +1,10 @@
+sub_table: collection of sections with the same value of table_id and:
+for a NIT: the same table_id_extension (network_id) and version_number;
+for a BAT: the same table_id_extension (bouquet_id) and version_number;
+for a SDT: the same table_id_extension (transport_stream_id), the same original_network_id and
+version_number;
+for a EIT: the same table_id_extension (service_id), the same transport_stream_id, the same original_network_id
+and version_number.
+NOTE: The table_id_extension field is equivalent to the fourth and fifth byte of a section when the
+section_syntax_indicator is set to a value of "1".
+table: comprised of a number of sub_tables with the same value of table_id

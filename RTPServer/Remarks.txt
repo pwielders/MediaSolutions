@@ -1,0 +1,3 @@
+Remarks w.r.t. testing against Live555 library:
+- First 2 frames from MPG files are dropped during play by Live555.
+- During streaming the first part of the frames consist of 4 0x00?

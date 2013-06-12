@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{88F87A62-7FFD-4B5B-8029-234F9DECC3E2}</ProjectGuid>
+    <RootNamespace>Generics</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <SccProjectName>Svn</SccProjectName>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;GENERICS_EXPORTS;LITTLE_ENDIAN_PLATFORM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GENERICS_EXPORTS;LITTLE_ENDIAN_PLATFORM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CountTrigger.cpp" />
+    <ClCompile Include="src\DataElement.cpp" />
+    <ClCompile Include="src\DataElementFile.cpp" />
+    <ClCompile Include="src\DataElementStreamer.cpp" />
+    <ClCompile Include="src\MediaStreamer.cpp" />
+    <ClCompile Include="src\NodeId.cpp" />
+    <ClCompile Include="src\Number.cpp" />
+    <ClCompile Include="src\Parser.cpp" />
+    <ClCompile Include="src\ParseURL.cpp" />
+    <ClCompile Include="src\Portability.cpp" />
+    <ClCompile Include="src\Signals.cpp" />
+    <ClCompile Include="src\Singleton.cpp" />
+    <ClCompile Include="src\SocketPort.cpp" />
+    <ClCompile Include="src\String.cpp" />
+    <ClCompile Include="src\Sync.cpp" />
+    <ClCompile Include="src\System.cpp" />
+    <ClCompile Include="src\Thread.cpp" />
+    <ClCompile Include="src\Time.cpp" />
+    <ClCompile Include="src\UniformResourceLocator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\CountTrigger.h" />
+    <ClInclude Include="src\DataElement.h" />
+    <ClInclude Include="src\DataElementContainer.h" />
+    <ClInclude Include="src\DataElementFile.h" />
+    <ClInclude Include="src\DataElementIterator.h" />
+    <ClInclude Include="src\DataElementStreamer.h" />
+    <ClInclude Include="src\DataElementStreamerType.h" />
+    <ClInclude Include="src\DataStorage.h" />
+    <ClInclude Include="src\Enumerate.h" />
+    <ClInclude Include="include\Generics.h" />
+    <ClInclude Include="src\IMedia.h" />
+    <ClInclude Include="src\KeyValueType.h" />
+    <ClInclude Include="src\MediaStreamer.h" />
+    <ClInclude Include="src\Module.h" />
+    <ClInclude Include="src\MultipleLock.h" />
+    <ClInclude Include="src\NodeId.h" />
+    <ClInclude Include="src\Number.h" />
+    <ClInclude Include="src\OptionalType.h" />
+    <ClInclude Include="src\Parser.h" />
+    <ClInclude Include="src\ParseURL.h" />
+    <ClInclude Include="src\Portability.h" />
+    <ClInclude Include="src\Proxy.h" />
+    <ClInclude Include="src\Queue.h" />
+    <ClInclude Include="src\RangeType.h" />
+    <ClInclude Include="src\Signals.h" />
+    <ClInclude Include="src\Singleton.h" />
+    <ClInclude Include="src\SlottedStorage.h" />
+    <ClInclude Include="src\SlottedStorageIterator.h" />
+    <ClInclude Include="src\SocketPort.h" />
+    <ClInclude Include="src\SocketServerType.h" />
+    <ClInclude Include="src\StateTrigger.h" />
+    <ClInclude Include="src\StlIterator.h" />
+    <ClInclude Include="src\String.h" />
+    <ClInclude Include="src\Sync.h" />
+    <ClInclude Include="src\SynchronizationDispatcherType.h" />
+    <ClInclude Include="src\System.h" />
+    <ClInclude Include="src\TextStreamerType.h" />
+    <ClInclude Include="src\Thread.h" />
+    <ClInclude Include="src\Time.h" />
+    <ClInclude Include="src\Timer.h" />
+    <ClInclude Include="src\Trace.h" />
+    <ClInclude Include="src\UniformResourceLocator.h" />
+    <ClInclude Include="src\UniVector.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
